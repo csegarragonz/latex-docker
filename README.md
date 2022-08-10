@@ -12,7 +12,15 @@ docker run \
   -v $PWD:/workdir \
   -e USER_ID=$(id -u) \
   -e GROUP_ID=$(id -g) \
-  arkark/latexmk main.tex
+  csegarragonz/latex-docker main.tex
+```
+
+To make it easier:
+
+```bash
+echo "alias latex-docker="docker run --rm -it -v $(pwd):/code -e USER_ID=$(id -u) -e GROUP_ID=$(id -g) csegarragonz/latex-docker" >> ./bashrc
+source ./bashrc
+latex-docker main.tex
 ```
 
 ## Acknowledgements
