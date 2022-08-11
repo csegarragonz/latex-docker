@@ -7,8 +7,7 @@ Zero-install LaTeX distribution for Linux.
 Navigate to the repository where the LaTeX source lives, and:
 
 ```bash
-docker run \
-  --rm -it \
+docker run --rm \
   -v $(pwd):/workdir \
   -u $(id -u):$(id -g) \
   csegarragonz/latex-docker:0.1.0 main.tex
@@ -17,7 +16,7 @@ docker run \
 To make it easier:
 
 ```bash
-echo "alias latex-docker='docker run --rm -it -v $(pwd):/workdir -u $(id -u):$(id -g) csegarragonz/latex-docker:0.1.0'" >> ~/.bashrc
+echo "alias latex-docker='docker run --rm -v $(pwd):/workdir -u $(id -u):$(id -g) csegarragonz/latex-docker:0.1.0'" >> ~/.bashrc
 source ~/.bashrc
 latex-docker main.tex
 ```
