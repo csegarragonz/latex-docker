@@ -16,7 +16,7 @@ def run(ctx):
 
         # Run test cmd
         test_cmd = [
-            "docker run --rm -it",
+            "docker run --rm",
             "-v {}:/workdir".format(test_dir),
             "-u {}:{}".format(getuid(), getgid()),
             "csegarragonz/latex-docker:{}".format(get_version()),
@@ -28,7 +28,7 @@ def run(ctx):
 
         # Clean the files
         clean_cmd = [
-            "docker run --rm -it",
+            "docker run --rm",
             "-v {}:/workdir".format(test_dir),
             "-u {}:{}".format(getuid(), getgid()),
             "csegarragonz/latex-docker:{}".format(get_version()),
