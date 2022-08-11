@@ -27,3 +27,19 @@ jobs:
         run: |
           source venv/bin/activate
           inv dev.format --check
+
+  tests:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: "Create venv"
+        run: ./bin/create_venv.sh
+      - name: "Update python deps"
+        run: |
+          source venv/bin/activate
+          pip3 install -r requirements.txt
+      - name: "Run tests"
+        run: |
+          source venv/bin/activate
+          inv tests
