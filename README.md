@@ -13,10 +13,10 @@ docker run --rm \
   csegarragonz/latex-docker:0.1.0 main.tex
 ```
 
-To make it easier:
+To make it easier, copy this into your `.bashrc`:
 
 ```bash
-echo "alias latex-docker='docker run --rm -v $(pwd):/workdir -u $(id -u):$(id -g) csegarragonz/latex-docker:0.1.0'" >> ~/.bashrc
+alias latex-docker='docker run --rm -v $(pwd):/workdir -u $(id -u):$(id -g) csegarragonz/latex-docker:0.1.0'
 source ~/.bashrc
 latex-docker main.tex
 ```
