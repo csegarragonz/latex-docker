@@ -7,6 +7,7 @@ usage () {
     echo "latex-docker <file.tex>: compile the file"
     echo "latex-docker clean: clean the working environment"
     echo "latex-docker help: print this message"
+    echo "latex-docker version: get the code version"
 }
 
 # Parse command line argument
@@ -16,8 +17,11 @@ if [[ "$#" -ne 1 ]]; then
 elif [[ $1 == "clean" ]]; then
     latexmk -C
     exit $?
-elif [[ $1 == "*.tex" ]]; then
-    latexmk -pdf
+elif [[ $1 == "version" ]]; then
+    echo "latex-docker version 0.1.0"
+    exit 0
+elif [[ $1 == *.tex ]]; then
+    latexmk -pdf $1
     exit $?
 else
     usage
