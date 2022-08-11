@@ -12,7 +12,7 @@ docker run \
   -v $(pwd):/workdir \
   -e USER_ID=$(id -u) \
   -e GROUP_ID=$(id -g) \
-  csegarragonz/latex-docker main.tex
+  csegarragonz/latex-docker:0.1.0 main.tex
 ```
 
 To make it easier:
