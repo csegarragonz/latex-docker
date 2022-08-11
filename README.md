@@ -24,6 +24,6 @@ latex-docker main.tex
 
 ## Acknowledgements
 
-This repo is heavily inspired in [arkark/latexmk](https://github.com/arkar/latexmk)'s.
+This repo is heavily inspired in [arkark/latexmk-docker](https://github.com/arkark/latexmk-docker)'s.
 Given that the author had archived the latter, I decided to give it a crack
 myself.
