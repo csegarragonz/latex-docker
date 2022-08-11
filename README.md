@@ -10,16 +10,15 @@ Navigate to the repository where the LaTeX source lives, and:
 docker run \
   --rm -it \
   -v $(pwd):/workdir \
-  -e USER_ID=$(id -u) \
-  -e GROUP_ID=$(id -g) \
+  -u $(id -u):$(id -g) \
   csegarragonz/latex-docker:0.1.0 main.tex
 ```
 
 To make it easier:
 
 ```bash
-echo "alias latex-docker='docker run --rm -it -v $(pwd):/code -e USER_ID=$(id -u) -e GROUP_ID=$(id -g) csegarragonz/latex-docker' >> ./bashrc
-source ./bashrc
+echo "alias latex-docker='docker run --rm -it -v $(pwd):/workdir -u $(id -u):$(id -g) csegarragonz/latex-docker:0.1.0'" >> ~/.bashrc
+source ~/.bashrc
 latex-docker main.tex
 ```
 
