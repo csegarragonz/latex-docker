@@ -114,8 +114,7 @@ def get_release_body():
         "orhunp/git-cliff:latest",
         "--config cliff.toml",
         "--repository /app",
-        # "{}..v{}".format(_get_release().tag_name, get_version()),
-        "{}..v{}".format("v0.1.0", get_version()),
+        "{}..v{}".format(_get_release().tag_name, get_version()),
     ]
 
     cmd = " ".join(docker_cmd)
