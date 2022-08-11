@@ -9,7 +9,7 @@ Navigate to the repository where the LaTeX source lives, and:
 ```bash
 docker run \
   --rm -it \
-  -v $PWD:/workdir \
+  -v $(pwd):/workdir \
   -e USER_ID=$(id -u) \
   -e GROUP_ID=$(id -g) \
   csegarragonz/latex-docker main.tex
