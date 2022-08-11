@@ -1,6 +1,7 @@
 from os.path import dirname, join, realpath
 
 PROJ_ROOT = dirname(dirname(realpath(__file__)))
+TESTS_ROOT = join(PROJ_ROOT, "tests")
 
 
 def get_version():
