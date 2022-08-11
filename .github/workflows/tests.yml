@@ -1,0 +1,27 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  formatting:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu:20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: "Update python deps"
+        run: |
+          source venv/bin/activate
+          pip3 install -r requirements.txt
+      - name: "Run formatting checks"
+        run: |
+          source venv/bin/activate
+          inv dev.format --check
