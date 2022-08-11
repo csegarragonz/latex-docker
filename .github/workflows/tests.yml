@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: "Create venv"
+        run: ./bin/create_venv.sh
       - name: "Update python deps"
         run: |
           source venv/bin/activate
