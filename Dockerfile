@@ -21,5 +21,5 @@ ENV PATH="${PATH}:/usr/local/texlive/${TEXLIVE_YEAR}/bin/x86_64-linux"
 
 # Prepare entrypoint
 WORKDIR /workdir
-COPY ./bin/docker_entrypoint /docker_entrypoint.sh
+COPY ./bin/docker_entrypoint.sh /docker_entrypoint.sh
 ENTRYPOINT ["/docker_entrypoint.sh"]
