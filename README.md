@@ -1,5 +1,4 @@
-# LaTeX in Docker
-[![Tests](https://github.com/csegarragonz/latex-docker/actions/workflows/tests.yml/badge.svg)](https://github.com/csegarragonz/latex-docker/actions/workflows/tests.yml)
+# LaTeX in Docker [![Tests](https://github.com/csegarragonz/latex-docker/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/csegarragonz/latex-docker/actions/workflows/tests.yml)
 
 Zero-install LaTeX distribution for Linux.
 
