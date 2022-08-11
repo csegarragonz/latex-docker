@@ -39,7 +39,13 @@ def build(ctx, nocache=False, push=False):
     run(cmd, shell=True, check=True, env=env, cwd=PROJ_ROOT)
 
     if push:
-        push(ctx)
+        do_push()
+
+
+def do_push():
+    push_cmd = "docker push {}".format(get_tag())
+    print(push_cmd)
+    run(push_cmd, shell=True, check=True)
 
 
 @task()
@@ -47,6 +53,4 @@ def push(ctx):
     """
     Push image to an image registry
     """
-    push_cmd = "docker push {}".format(get_tag())
-    print(push_cmd)
-    run(push_cmd, shell=True, check=True)
+    do_push()
