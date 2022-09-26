@@ -2,12 +2,12 @@
 
 set -e
 
-THIS_DIR=$(dirname $(readlink -f $0))
+THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]:-${(%):-%x}}" )" >/dev/null 2>&1 && pwd )"
 PROJ_ROOT=${THIS_DIR}/..
 VENV_PATH="${PROJ_ROOT}/venv"
 
-PIP=${VENV_PATH}/bin/pip3.8
-PYTHON=python3.8
+PIP=${VENV_PATH}/bin/pip3
+PYTHON=python3
 
 function pip_cmd {
     source ${VENV_PATH}/bin/activate && ${PIP} "$@"
