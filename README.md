@@ -13,11 +13,12 @@ docker run --rm \
   csegarragonz/latex-docker:0.1.2 main.tex
 ```
 
-To make it easier, copy this into your `.zshrc`:
+To make it easier, copy this into your `.zshrc` or `.bashrc`:
 
 ```bash
 alias latex-docker='docker run --rm -v $(pwd):/workdir -u $(id -u):$(id -g) csegarragonz/latex-docker:0.1.2'
 source ~/.zshrc
+source ~/.bashrc
 latex-docker main.tex
 ```
 
