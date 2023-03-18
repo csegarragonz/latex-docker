@@ -12,6 +12,7 @@ from tasks.env import (
 VERSIONED_FILES = [
     "VERSION",
     "README.md",
+    "./bin/docker_entrypoint.sh",
 ]
 
 VERSIONED_DIRS = [join(PROJ_ROOT, ".github")]
