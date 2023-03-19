@@ -18,7 +18,7 @@ elif [[ $1 == "clean" ]]; then
     latexmk -C
     exit $?
 elif [[ $1 == "version" ]]; then
-    echo "latex-docker version 0.1.0"
+    echo "latex-docker version 0.1.4"
     exit 0
 elif [[ $1 == *.tex ]]; then
     latexmk -pdf $1
