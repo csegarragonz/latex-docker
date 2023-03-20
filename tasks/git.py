@@ -1,7 +1,7 @@
 from github import Github
 from invoke import task
 from os.path import join
-from subprocess import run, PIPE
+from subprocess import run
 from tasks.env import (
     get_version,
     GH_TOKEN_PATH,
