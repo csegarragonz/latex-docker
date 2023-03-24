@@ -10,3 +10,10 @@ def get_version():
         version = fh.read()
         version = version.strip()
     return version
+
+
+def get_texlive_year():
+    with open(join(PROJ_ROOT, "TEXLIVE_YEAR"), "r") as fh:
+        version = fh.read()
+        version = version.strip()
+    return version

@@ -1,10 +1,10 @@
 from invoke import task
 from subprocess import run
-from tasks.env import get_version, PROJ_ROOT
+from tasks.env import get_texlive_year, PROJ_ROOT
 
 
 def get_tag():
-    return "csegarragonz/latex-docker:{}".format(get_version())
+    return "csegarragonz/latex-docker:texlive_{}".format(get_texlive_year())
 
 
 @task(default=True)
