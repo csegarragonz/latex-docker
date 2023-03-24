@@ -18,6 +18,7 @@ def build(ctx, nocache=False, push=False):
         "docker",
         "build",
         "--no-cache" if nocache else "",
+        "--build-arg TEXLIVE_YEAR={}".format(get_texlive_year()),
         "-t {}".format(tag),
         "{}".format(
             " ".join(
