@@ -11,7 +11,6 @@ RUN apt update && \
     wget
 
 # Install TexLive: https://tug.org/texlive/quickinstall.html
-# TODO: still latest texlive version points to 2022
 ARG TEXLIVE_YEAR
 WORKDIR /tmp
 RUN wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz && \

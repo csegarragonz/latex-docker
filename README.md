@@ -10,13 +10,13 @@ Navigate to the repository where the LaTeX source lives and:
 docker run --rm \
   -v $(pwd):/workdir \
   -u $(id -u):$(id -g) \
-  csegarragonz/latex-docker:texlive_2023 main.tex
+  csegarragonz/latex-docker:texlive_2024 main.tex
 ```
 
 To make it easier, copy this into your `.zshrc` or `.bashrc`:
 
 ```bash
-alias latex-docker='docker run --rm -v $(pwd):/workdir -u $(id -u):$(id -g) csegarragonz/latex-docker:texlive_2023'
+alias latex-docker='docker run --rm -v $(pwd):/workdir -u $(id -u):$(id -g) csegarragonz/latex-docker:texlive_2024'
 source ~/.zshrc
 source ~/.bashrc
 latex-docker main.tex
