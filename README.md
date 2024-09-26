@@ -4,19 +4,19 @@ Zero-install LaTeX distribution for Linux.
 
 ## Quick Start
 
-Navigate to the repository where the LaTeX source lives, and:
+Navigate to the repository where the LaTeX source lives and:
 
 ```bash
 docker run --rm \
   -v $(pwd):/workdir \
   -u $(id -u):$(id -g) \
-  csegarragonz/latex-docker:0.1.4 main.tex
+  csegarragonz/latex-docker:texlive_2024 main.tex
 ```
 
 To make it easier, copy this into your `.zshrc` or `.bashrc`:
 
 ```bash
-alias latex-docker='docker run --rm -v $(pwd):/workdir -u $(id -u):$(id -g) csegarragonz/latex-docker:0.1.4'
+alias latex-docker='docker run --rm -v $(pwd):/workdir -u $(id -u):$(id -g) csegarragonz/latex-docker:texlive_2024'
 source ~/.zshrc
 source ~/.bashrc
 latex-docker main.tex
